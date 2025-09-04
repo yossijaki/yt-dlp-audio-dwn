@@ -1,38 +1,41 @@
 # YT Music Dwnldr (Windows Batch Script)
 
-This project allows you to dwnld music from YouTube in **MP3 format** with the video's thumbnail embedded as album art. It uses **yt-dlp** and **FFmpeg** for dwnldng and processing. Designed for Windows, it is simple and ready to use.
+This project allows you to dwnld music from YT in **MP3 format** with the video's thumbnail embedded as album art. It uses **yt-dlp** and **FFmpeg** for dwnldng and processing. Designed for Windows, it is simple and ready to use.
 
 ---
 
 ## 📂 Project Structure
 
 ```
-
-/res
-yt-dlp.exe
-ffmpeg.exe
-downloads-list.txt
-downloads.bat
-/temp-files   (temporary folder, auto-created)
-downloads     (output folder, auto-created)
+yt-dlp-audio-dwn/
+│
+├── downloads-list.txt      # List of URLs to dwnld (placed in the root)
+├── download.bat            # Main script to start dwnld
+│
+├── res/
+│   ├── yt-dlp.exe          # yt-dlp executable
+│   └── ffmpeg.exe          # FFmpeg executable
+│
+├── temp-files/             # Temporary folder (auto-created)
+└── downloads/              # Output folder for downloaded files (auto-created)
 
 ```
 
 - `res/yt-dlp.exe` → yt-dlp executable
 - `res/ffmpeg.exe` → FFmpeg executable
 - `downloads-list.txt` → text file containing YT links
-- `downloads.bat` → main batch script for downloads
+- `download.bat` → main batch script for downloads
 
 ---
 
 ## 📝 How to Use
 
 1. Open `downloads-list.txt` with **Notepad** or any text editor.  
-2. Add YT links, **one per line**, for example:
+2. Add YT links, **one per line**, for example (put the complete YT word in the real links):
 
-	[https://www.youtube.com/watch?v=abc123](https://www.youtube.com/watch?v=abc123)  
-	[https://www.youtube.com/watch?v=def456](https://www.youtube.com/watch?v=def456)  
-	[https://www.youtube.com/watch?v=ghi789](https://www.youtube.com/watch?v=ghi789)  
+	[https://www.yt.com/watch?v=abc123](https://www.yt.com/watch?v=abc123)  
+	[https://www.yt.com/watch?v=def456](https://www.yt.com/watch?v=def456)  
+	[https://www.yt.com/watch?v=ghi789](https://www.yt.com/watch?v=ghi789)  
 
 
 > ⚠️ Each link must be on a separate line. Do not add commas or trailing spaces.
